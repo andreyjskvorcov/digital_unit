@@ -1,11 +1,13 @@
 <template>
   <MainLayout>
     <MainBanner />
+
+    <MainPartners />
   </MainLayout>
 </template>
 
 <script setup lang="ts">
-import { MainBanner } from '@/components/widgets/main-banner';
+import { MainBanner, MainPartners } from '@/components/widgets';
 import MainLayout from '@/layouts/MainLayout.vue';
 </script>
 

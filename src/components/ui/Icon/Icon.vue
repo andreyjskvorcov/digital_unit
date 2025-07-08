@@ -5,13 +5,15 @@
 </template>
 
 <script lang="ts" setup>
-const props = defineProps<{ imageName: string }>()
+const props = defineProps<{ imageName: string }>();
 
 function getIconImage(imageName: string) {
   try {
-    return new URL(`/src/assets/images/icons/${imageName}`, import.meta.url).href
+    return new URL(`/src/assets/images/icons/${imageName}`, import.meta.url)
+      .href;
   } catch {
-    return new URL(`/src/assets/images/icons/default.svg`, import.meta.url).href
+    return new URL(`/src/assets/images/icons/default.svg`, import.meta.url)
+      .href;
   }
 }
 </script>

@@ -30,7 +30,11 @@ $color-white-10: rgba(237, 245, 255, 0.1);
 $color-white-20: rgba(237, 245, 255, 0.2);
 $color-white-30: rgba(237, 245, 255, 0.3);
 $color-white-60: rgba(237, 245, 255, 0.6);
-$color-gradient: linear-gradient(180deg, $color-light-gray 11.5%, rgb(157, 163, 171) 100%);
+$color-gradient: linear-gradient(
+  180deg,
+  $color-light-gray 11.5%,
+  rgb(157, 163, 171) 100%
+);
 
 /* font styles */
 $text-heading-1: 500 96px/94% $font-family-base; // Heading 1 96/94%
@@ -103,6 +107,8 @@ $spacing-14: 56px;
 $spacing-15: 60px;
 $spacing-16: 64px;
 $spacing-20: 80px;
+$spacing-21: 84px;
+$spacing-22: 88px;
 $spacing-24: 96px;
 $spacing-32: 128px;
 $spacing-33: 134px;
@@ -153,6 +159,7 @@ $gap-10: 40px;
 $gap-12: 48px;
 $gap-13: 50px;
 $gap-14: 54px;
+$gap-15: 60px;
 $gap-16: 64px;
 $gap-20: 80px;
 $gap-24: 96px;

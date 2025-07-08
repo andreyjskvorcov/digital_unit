@@ -192,6 +192,7 @@ const list = ref([
     align-items: center;
     justify-content: center;
     position: relative;
+    transform: translate(10px);
 
     span {
       height: 2px;

@@ -21,7 +21,9 @@
 import { Icon } from '@/components/ui';
 import emblaCarouselVue from 'embla-carousel-vue';
 import AutoScroll from 'embla-carousel-auto-scroll';
-import { onMounted } from 'vue';
+import { useBreakpoint } from '@/lib/breakpoints';
+
+const isMd = useBreakpoint('md');
 
 const [emblaRef, emblaApi] = emblaCarouselVue(
   {
@@ -34,14 +36,14 @@ const [emblaRef, emblaApi] = emblaCarouselVue(
 );
 
 const onMouseEnter = () => {
-  if (!emblaApi.value) return;
+  if (!emblaApi.value || !isMd) return;
 
   const autoScroll = emblaApi.value.plugins().autoScroll;
   autoScroll.stop();
 };
 
 const onMouseleave = () => {
-  if (!emblaApi.value) return;
+  if (!emblaApi.value || !isMd) return;
 
   const autoScroll = emblaApi.value.plugins().autoScroll;
   autoScroll.play();

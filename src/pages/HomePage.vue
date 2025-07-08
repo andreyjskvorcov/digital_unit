@@ -1,10 +1,12 @@
 <template>
-  <MainLayout> </MainLayout>
+  <MainLayout>
+    <MainBanner />
+  </MainLayout>
 </template>
 
 <script setup lang="ts">
-import { Button } from '@/components/ui'
-import MainLayout from '@/layouts/MainLayout.vue'
+import { MainBanner } from '@/components/widgets/main-banner';
+import MainLayout from '@/layouts/MainLayout.vue';
 </script>
 
 <style lang="scss"></style>

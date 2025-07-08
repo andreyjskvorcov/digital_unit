@@ -4,6 +4,7 @@
       <div class="header__logo" />
 
       <div
+        v-if="!isSm"
         class="header__burger"
         :class="{ 'is-open': openMenu }"
         @click="onClickOpenMenu()"
@@ -20,7 +21,7 @@
         </ul>
       </nav>
 
-      <div class="header__info" :class="{ 'is-open': openMenu }">
+      <div v-if="!isSm" class="header__info" :class="{ 'is-open': openMenu }">
         <span>Ⓒ 2025 WIVO Finance Inc. All rights reserved.</span>
       </div>
 
@@ -32,9 +33,11 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 import { Icon, Button } from '@/components/ui';
+import { useBreakpoint } from '@/lib/breakpoints';
 
 const openMenu = ref(false);
 const isColor = ref(false);
+const isSm = useBreakpoint('sm');
 
 const onClickOpenMenu = (): void => {
   openMenu.value = !openMenu.value;
@@ -88,7 +91,6 @@ const list = ref([
   }
 
   &__container {
-    max-width: $wrap;
     width: 100%;
     padding: 0 $spacing-10;
     height: 100%;
@@ -147,7 +149,6 @@ const list = ref([
   }
 
   &__info {
-    display: none;
     font: $text-link-s;
     z-index: 100;
     position: fixed;
@@ -158,10 +159,6 @@ const list = ref([
     transform: translate(-100%);
     width: 100%;
     padding: 0 $spacing-4;
-
-    @media ($media-sm) {
-      display: block;
-    }
 
     &.is-open {
       opacity: 1;
@@ -185,7 +182,7 @@ const list = ref([
   }
 
   &__burger {
-    display: none;
+    display: flex;
     margin: 0 auto;
     height: 40px;
     width: 54px;
@@ -222,10 +219,6 @@ const list = ref([
           top: initial;
         }
       }
-    }
-
-    @media ($media-sm) {
-      display: flex;
     }
   }
 

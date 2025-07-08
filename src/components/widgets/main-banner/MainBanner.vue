@@ -1,5 +1,5 @@
 <template>
-  <div class="main-banner" ref="bannerRef">
+  <div class="main-banner" ref="bannerRef" :id="Anchors.MainBanner">
     <div class="main-banner__container">
       <h1 class="main-banner__title">Your future revolutionary banking</h1>
 
@@ -34,6 +34,7 @@
 import { Button } from '@/components/ui';
 import { useBreakpoint } from '@/lib/breakpoints';
 import { useGsapScrollAnimations } from '@/composables/useGsapScrollAnimations';
+import { Anchors } from '@/constants';
 
 const bannerRef = useGsapScrollAnimations();
 

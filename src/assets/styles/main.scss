@@ -1,6 +1,10 @@
 @use './reset';
 @use './fonts';
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -55,6 +59,13 @@ p {
 a,
 a:visited {
   font: $text-link-s;
+  text-decoration: none;
+  color: $color-white;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
 
   @media ($media-sm) {
     font: $text-link-s-mobile;

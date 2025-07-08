@@ -1,5 +1,5 @@
 <template>
-  <div class="main-banner-info" ref="partnersRef">
+  <div class="main-banner-info" ref="partnersRef" :id="Anchors.Info">
     <div class="main-banner-info__container">
       <div class="main-banner-info__hero" ref="redRef"></div>
 
@@ -19,6 +19,7 @@
 
 <script lang="ts" setup>
 import { useGsapScrollAnimations } from '@/composables/useGsapScrollAnimations';
+import { Anchors } from '@/constants';
 import { onMounted } from 'vue';
 
 const partnersRef = useGsapScrollAnimations();

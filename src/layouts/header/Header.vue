@@ -1,5 +1,5 @@
 <template>
-  <header class="header" :class="{ 'is-open': openMenu }">
+  <header class="header" :class="{ 'is-open': openMenu, 'is-color': isColor }">
     <div class="header__container">
       <div class="header__logo" />
 
@@ -15,8 +15,15 @@
 
       <nav class="header__nav" :class="{ 'is-open': openMenu }">
         <ul class="header__list">
-          <li class="header__item" v-for="(item, index) in list" :key="index">
-            {{ item.label }}
+          <li
+            class="header__item"
+            v-for="(item, index) in list"
+            :class="{ 'is-acitve': route.hash === `#${item.anchor}` }"
+            :key="index"
+          >
+            <a :href="`#${item.anchor}`" @click="onAnchorClick">
+              {{ item.label }}
+            </a>
           </li>
         </ul>
       </nav>
@@ -31,16 +38,21 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue';
-import { Icon, Button } from '@/components/ui';
+import { ref, onMounted, onUnmounted } from 'vue';
+import { Button } from '@/components/ui';
 import { useBreakpoint } from '@/lib/breakpoints';
+import { Anchors } from '@/constants';
+import { useRoute } from 'vue-router';
 
-const openMenu = ref(false);
 const isColor = ref(false);
+const openMenu = ref(false);
 const isSm = useBreakpoint('sm');
+const route = useRoute();
 
 const onClickOpenMenu = (): void => {
   openMenu.value = !openMenu.value;
+
+  console.log('route', route);
 
   if (openMenu.value) {
     document.body.classList.add('is-hidden');
@@ -50,23 +62,28 @@ const onClickOpenMenu = (): void => {
 };
 
 const list = ref([
-  {
-    label: 'Card',
-    active: false,
-  },
-  {
-    label: 'App',
-    active: false,
-  },
-  {
-    label: 'Customize',
-    active: false,
-  },
-  {
-    label: 'FAQs',
-    active: false,
-  },
+  { label: 'Card', anchor: Anchors.MainBanner },
+  { label: 'App', anchor: Anchors.Partners },
+  { label: 'Customize', anchor: Anchors.Info },
+  { label: 'FAQs', anchor: 'faqs' },
 ]);
+
+const onAnchorClick = () => {
+  openMenu.value = false;
+  document.body.classList.remove('is-hidden');
+};
+
+const handleScroll = () => {
+  isColor.value = window.scrollY > 50; // 50px — порог, можно изменить
+};
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll);
+});
 </script>
 
 <style lang="scss">
@@ -83,6 +100,10 @@ const list = ref([
   align-items: center;
 
   &.is-open {
+    background-color: $color-black;
+  }
+
+  &.is-color {
     background-color: $color-black;
   }
 
@@ -172,11 +193,9 @@ const list = ref([
     list-style: none;
     gap: $gap-8;
     padding: 0;
-    font: $text-nav-link;
 
     @media ($media-sm) {
       gap: $gap-6;
-      font: $text-nav-link-mobile;
       flex-direction: column;
     }
   }
@@ -224,11 +243,27 @@ const list = ref([
 
   &__item {
     transition: $transition-fast;
-    color: $color-white;
-    cursor: pointer;
 
-    &:hover {
-      opacity: 0.7;
+    &.is-acitve {
+      a,
+      a:visited {
+        color: $color-light-gray;
+      }
+    }
+
+    a,
+    a:visited {
+      color: $color-white;
+      cursor: pointer;
+      font: $text-nav-link;
+
+      @media ($media-sm) {
+        font: $text-nav-link-mobile;
+      }
+
+      &:hover {
+        opacity: 0.7;
+      }
     }
   }
 }

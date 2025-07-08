@@ -18,6 +18,20 @@ $line-height-md: 1.6;
 $line-height-lg: 1.8;
 $line-height-xl: 2;
 
+/* colors styles */
+
+$color-black: rgba(0, 0, 0, 1);
+$color-black-30: rgba(0, 0, 0, 0.3);
+$color-light-black: rgba(19, 19, 20, 1);
+$color-gray: rgba(48, 50, 54, 1);
+$color-light-gray: rgba(133, 136, 143, 1);
+$color-white: rgba(255, 255, 255, 1);
+$color-white-10: rgba(237, 245, 255, 0.1);
+$color-white-20: rgba(237, 245, 255, 0.2);
+$color-white-30: rgba(237, 245, 255, 0.3);
+$color-white-60: rgba(237, 245, 255, 0.6);
+$color-gradient: linear-gradient(180deg, $color-light-gray 11.5%, rgb(157, 163, 171) 100%);
+
 /* font styles */
 $text-heading-1: 500 96px/94% $font-family-base; // Heading 1 96/94%
 $text-heading-1-mobile: 500 60px/94% $font-family-base; // Heading 1 60/94% mobile
@@ -184,6 +198,6 @@ $media-xl: 'max-width: 1439px';
 $media-2xl: 'max-width: 1919px';
 
 /* wrapper */
-$wrap: 1280px;
-$header-height-xs: 82px;
-$header-height-sm: 112px;
+$wrap: 1440px;
+$header-height-xs: 76px;
+$header-height-sm: 64px;

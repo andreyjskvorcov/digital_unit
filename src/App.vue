@@ -1,13 +1,15 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-</script>
-
 <template>
-  <div class="main-app">
-    <div class="main-app__container">
-      <RouterView />
-    </div>
-  </div>
+  <RouterView />
 </template>
 
-<style scoped></style>
+<script setup lang="ts">
+import { RouterView } from 'vue-router'
+</script>
+
+<style lang="scss">
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+</style>

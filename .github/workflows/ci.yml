@@ -24,9 +24,11 @@ jobs:
       - name: Build Quasar app
         run: npm run build
 
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          BRANCH: master # The branch the action should deploy to.
-          FOLDER: dist # The folder the action should deploy.
+      # - name: Deploy to GitHub Pages
+      #   uses: JamesIves/github-pages-deploy-action@v4
+      #   with:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #     REPOSITORY_NAME: Wunderkammer-Amsterdam/wunderkammer-amsterdam.github.io
+      #     BRANCH: master # The branch the action should deploy to.
+      #     FOLDER: dist # The folder the action should deploy.
 # Укажите папку с вашим билдом

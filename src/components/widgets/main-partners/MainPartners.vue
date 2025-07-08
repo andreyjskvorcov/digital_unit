@@ -1,5 +1,5 @@
 <template>
-  <div class="main-partners">
+  <div class="main-partners" ref="partnersRef">
     <div class="main-partners__container">
       <p class="main-partners__caption">
         Used by the world's most amazing companies
@@ -12,6 +12,9 @@
 
 <script lang="ts" setup>
 import MainPartnersCarousel from './MainPartnersCarousel.vue';
+import { useGsapScrollAnimations } from '@/composables/useGsapScrollAnimations';
+
+const partnersRef = useGsapScrollAnimations();
 </script>
 
 <style lang="scss">

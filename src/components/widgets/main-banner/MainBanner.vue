@@ -1,5 +1,5 @@
 <template>
-  <div class="main-banner">
+  <div class="main-banner" ref="bannerRef">
     <div class="main-banner__container">
       <h1 class="main-banner__title">Your future revolutionary banking</h1>
 
@@ -33,6 +33,9 @@
 <script lang="ts" setup>
 import { Button } from '@/components/ui';
 import { useBreakpoint } from '@/lib/breakpoints';
+import { useGsapScrollAnimations } from '@/composables/useGsapScrollAnimations';
+
+const bannerRef = useGsapScrollAnimations();
 
 const isMd = useBreakpoint('md');
 </script>

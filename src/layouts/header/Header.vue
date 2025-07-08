@@ -247,7 +247,9 @@ onUnmounted(() => {
     &.is-acitve {
       a,
       a:visited {
-        color: $color-light-gray;
+        @media ($media-sm) {
+          color: $color-light-gray;
+        }
       }
     }
 

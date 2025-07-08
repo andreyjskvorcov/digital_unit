@@ -4,8 +4,8 @@
       <div
         class="embla"
         ref="emblaRef"
-        @mouseleave="onMouseleave"
-        @mouseenter="onMouseEnter"
+        @mouseleave="resumeAutoScroll"
+        @mouseenter="pauseAutoScroll"
       >
         <div class="embla__container">
           <div class="embla__slide" v-for="el in 20" :key="el">
@@ -21,9 +21,7 @@
 import { Icon } from '@/components/ui';
 import emblaCarouselVue from 'embla-carousel-vue';
 import AutoScroll from 'embla-carousel-auto-scroll';
-import { useBreakpoint } from '@/lib/breakpoints';
-
-const isMd = useBreakpoint('md');
+import { onClickOutside } from '@vueuse/core';
 
 const [emblaRef, emblaApi] = emblaCarouselVue(
   {
@@ -35,19 +33,21 @@ const [emblaRef, emblaApi] = emblaCarouselVue(
   [AutoScroll({ startDelay: 100 })],
 );
 
-const onMouseEnter = () => {
-  if (!emblaApi.value || !isMd) return;
+const pauseAutoScroll = () => {
+  if (!emblaApi.value) return;
 
   const autoScroll = emblaApi.value.plugins().autoScroll;
   autoScroll.stop();
 };
 
-const onMouseleave = () => {
-  if (!emblaApi.value || !isMd) return;
+const resumeAutoScroll = () => {
+  if (!emblaApi.value) return;
 
   const autoScroll = emblaApi.value.plugins().autoScroll;
   autoScroll.play();
 };
+
+onClickOutside(emblaRef, (event) => resumeAutoScroll());
 </script>
 
 <style lang="scss">

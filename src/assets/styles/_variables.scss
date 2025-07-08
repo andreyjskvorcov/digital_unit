@@ -1,0 +1,189 @@
+$font-family-base: 'Inter', sans-serif;
+
+$font-weight-thin: 100;
+$font-weight-extralight: 200;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+$font-weight-black: 900;
+
+/* line height */
+$line-height-xs: 1.1;
+$line-height-sm: 1.2;
+$line-height-base: 1.4;
+$line-height-md: 1.6;
+$line-height-lg: 1.8;
+$line-height-xl: 2;
+
+/* font styles */
+$text-heading-1: 500 96px/94% $font-family-base; // Heading 1 96/94%
+$text-heading-1-mobile: 500 60px/94% $font-family-base; // Heading 1 60/94% mobile
+
+$text-heading-2: 500 72px/94% $font-family-base; // Heading 2 72/94%
+$text-heading-2-mobile: 500 48px/94% $font-family-base; // Heading 2 72/94% mobile
+
+$text-heading-3: 500 24px/130% $font-family-base; // Heading 3 24/130%
+$text-heading-3-mobile: 500 18px/135% $font-family-base; // Heading 3 18/135% mobile
+
+$text-paragraph: 500 18px/135% $font-family-base; // Paragraph 18/135%
+$text-paragraph-mobile: 500 18px/135% $font-family-base; // Paragraph 18/135% mobile
+
+$text-body-m: 400 18px/135% $font-family-base; // Paragraph 18/135%
+$text-body-m-mobile: 400 18px/135% $font-family-base; // Paragraph 18/135% mobile
+
+$text-body-s: 400 18px/150% $font-family-base; // Body S 14/150%
+$text-body-s-mobile: 400 18px/150% $font-family-base; // Body S 14/150% mobile
+
+$text-link-m: 500 18px/135% $font-family-base; // Link M 18/135%
+$text-link-m-mobile: 500 18px/135% $font-family-base; // Link M 18/135% mobile
+
+$text-link-s: 500 14px/135% $font-family-base; // Link S 14/135%
+$text-link-s-mobile: 500 14px/135% $font-family-base; // Link S 14/135% mobile
+
+$text-nav-link: 500 18px/135% $font-family-base; // Nav Link 18/135%
+$text-nav-link-mobile: 500 60px/94% $font-family-base; // Nav Link 60/94% mobile
+
+$text-caption: 500 16px/150% $font-family-base; // Caption 16/150%
+$text-caption-mobile: 500 16px/140% $font-family-base; // Caption 16/140% mobile
+
+$text-disclaimer: 400 14px/150% $font-family-base; // Disclaimer 14/150%
+$text-disclaimer-mobile: 400 12px/150% $font-family-base; // Disclaimer 12/150% mobile
+
+/* transition */
+$transition-fast: 0.2s ease-in-out;
+$transition-base: 0.3s ease;
+$transition-slow: 0.5s ease-in-out;
+
+/* border-radius */
+$radius-default: 4px;
+$radius-xs: 2px;
+$radius-sm: 4px;
+$radius-md: 6px;
+$radius-lg: 8px;
+$radius-xl: 12px;
+$radius-rounded-2xl: 16px;
+$radius-rounded-3xl: 24px;
+$radius-rounded-4xl: 32px;
+$radius-rounded-none: 0;
+$radius-full: 9999px;
+
+/* spacing from margin | padding | top | left | right | bottom */
+$spacing-auto: auto;
+$spacing-0: 0;
+$spacing-1: 4px;
+$spacing-2: 8px;
+$spacing-3: 12px;
+$spacing-4: 16px;
+$spacing-5: 20px;
+$spacing-6: 24px;
+$spacing-7: 28px;
+$spacing-8: 32px;
+$spacing-9: 36px;
+$spacing-10: 40px;
+$spacing-11: 44px;
+$spacing-12: 48px;
+$spacing-14: 56px;
+$spacing-15: 60px;
+$spacing-16: 64px;
+$spacing-20: 80px;
+$spacing-24: 96px;
+$spacing-32: 128px;
+$spacing-33: 134px;
+$spacing-40: 160px;
+$spacing-48: 192px;
+$spacing-56: 224px;
+$spacing-64: 256px;
+
+/* grid-template-columns :example grid-template-columns: $grid-cols-1 */
+$grid-cols-1: repeat(1, minmax(0, 1fr));
+$grid-cols-2: repeat(2, minmax(0, 1fr));
+$grid-cols-3: repeat(3, minmax(0, 1fr));
+$grid-cols-4: repeat(4, minmax(0, 1fr));
+$grid-cols-5: repeat(5, minmax(0, 1fr));
+$grid-cols-6: repeat(6, minmax(0, 1fr));
+$grid-cols-7: repeat(7, minmax(0, 1fr));
+$grid-cols-8: repeat(8, minmax(0, 1fr));
+$grid-cols-9: repeat(9, minmax(0, 1fr));
+$grid-cols-10: repeat(10, minmax(0, 1fr));
+$grid-cols-11: repeat(11, minmax(0, 1fr));
+$grid-cols-12: repeat(12, minmax(0, 1fr));
+
+/* grid-column :example grid-column: $col-span-1 */
+$col-span-1: span 1 / span 1;
+$col-span-2: span 2 / span 2;
+$col-span-3: span 3 / span 3;
+$col-span-4: span 4 / span 4;
+$col-span-5: span 5 / span 5;
+$col-span-6: span 6 / span 6;
+$col-span-7: span 7 / span 7;
+$col-span-8: span 8 / span 8;
+$col-span-9: span 9 / span 9;
+$col-span-10: span 10 / span 10;
+$col-span-11: span 11 / span 11;
+$col-span-12: span 12 / span 12;
+
+/* gap */
+$gap-1: 4px;
+$gap-2: 8px;
+$gap-3: 12px;
+$gap-4: 16px;
+$gap-5: 20px;
+$gap-6: 24px;
+$gap-7: 24px;
+$gap-8: 32px;
+$gap-9: 36px;
+$gap-10: 40px;
+$gap-12: 48px;
+$gap-13: 50px;
+$gap-14: 54px;
+$gap-16: 64px;
+$gap-20: 80px;
+$gap-24: 96px;
+$gap-32: 128px;
+$gap-40: 160px;
+$gap-48: 192px;
+$gap-56: 224px;
+$gap-64: 256px;
+
+/* width */
+$w-auto: auto;
+$w-full: 100%;
+$w-screen: 100vw;
+$w-50: 50%;
+$w-25: 25%;
+
+/* height */
+$h-auto: auto;
+$h-full: 100%;
+$h-screen: 100vh;
+
+/* opacity */
+$opacity-25: 0.25;
+$opacity-50: 0.5;
+$opacity-75: 0.75;
+$opacity-100: 1;
+$opacity-0: 0;
+
+/* box-shadow */
+$shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+
+/* align-text */
+$text-center: center;
+$text-left: left;
+$text-right: center;
+
+/* media breakpoints */
+$media-xs: 'max-width: 375px';
+$media-sm: 'max-width: 767px';
+$media-md: 'max-width: 1023px';
+$media-lg: 'max-width: 1279px';
+$media-xl: 'max-width: 1439px';
+$media-2xl: 'max-width: 1919px';
+
+/* wrapper */
+$wrap: 1280px;
+$header-height-xs: 82px;
+$header-height-sm: 112px;

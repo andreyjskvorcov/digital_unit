@@ -1,0 +1,15 @@
+@use './reset';
+@use './normalize';
+@use './fonts';
+@use './variables';
+
+body {
+  margin: 0;
+  padding: 0;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  width: 100vw;
+}

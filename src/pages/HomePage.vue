@@ -9,6 +9,8 @@
     <MainAnalytics />
 
     <MainNoticed />
+
+    <MainFaq />
   </MainLayout>
 </template>
 
@@ -19,6 +21,7 @@ import {
   MainBannerInfo,
   MainAnalytics,
   MainNoticed,
+  MainFaq,
 } from '@/components/widgets';
 import MainLayout from '@/layouts/MainLayout.vue';
 </script>

@@ -46,7 +46,7 @@ const analyticsRef = useGsapScrollAnimations();
 
 const badgeRef = useGsapScrollAnimations({
   opacity: 0,
-  duration: 0.2,
+  duration: 0.7,
   scale: 0,
   ease: 'power2.out',
 });

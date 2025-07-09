@@ -65,7 +65,7 @@ const list = ref([
   { label: 'Card', anchor: Anchors.MainBanner },
   { label: 'App', anchor: Anchors.Partners },
   { label: 'Customize', anchor: Anchors.Info },
-  { label: 'FAQs', anchor: 'faqs' },
+  { label: 'FAQs', anchor: Anchors.Analytics },
 ]);
 
 const onAnchorClick = () => {

@@ -1,7 +1,7 @@
 <template>
   <div class="main-banner-info" ref="partnersRef" :id="Anchors.Info">
     <div class="main-banner-info__container">
-      <div class="main-banner-info__hero" ref="redRef"></div>
+      <div class="main-banner-info__hero" ref="partnersHeroRef"></div>
 
       <div class="main-banner-info__text">
         <h2>Spend anywhere with a <span>physical debit card</span></h2>
@@ -20,11 +20,10 @@
 <script lang="ts" setup>
 import { useGsapScrollAnimations } from '@/composables/useGsapScrollAnimations';
 import { Anchors } from '@/constants';
-import { onMounted } from 'vue';
 
 const partnersRef = useGsapScrollAnimations();
 
-const redRef = useGsapScrollAnimations({
+const partnersHeroRef = useGsapScrollAnimations({
   x: -200,
   opacity: 0,
   duration: 1,

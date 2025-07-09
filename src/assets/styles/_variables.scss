@@ -21,6 +21,7 @@ $line-height-xl: 2;
 /* colors styles */
 
 $color-black: rgba(0, 0, 0, 1);
+$color-black-50: rgba(0, 0, 0, 0.5);
 $color-black-30: rgba(0, 0, 0, 0.3);
 $color-light-black: rgba(19, 19, 20, 1);
 $color-gray: rgba(48, 50, 54, 1);
@@ -69,6 +70,8 @@ $text-caption-mobile: 500 16px/140% $font-family-base; // Caption 16/140% mobile
 
 $text-disclaimer: 400 14px/150% $font-family-base; // Disclaimer 14/150%
 $text-disclaimer-mobile: 400 12px/150% $font-family-base; // Disclaimer 12/150% mobile
+
+$text-badge: 500 10px/150% $font-family-base; // Caption 16/150%
 
 /* transition */
 $transition-fast: 0.2s ease-in-out;

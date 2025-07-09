@@ -7,6 +7,8 @@
     <MainBannerInfo />
 
     <MainAnalytics />
+
+    <MainNoticed />
   </MainLayout>
 </template>
 
@@ -16,6 +18,7 @@ import {
   MainPartners,
   MainBannerInfo,
   MainAnalytics,
+  MainNoticed,
 } from '@/components/widgets';
 import MainLayout from '@/layouts/MainLayout.vue';
 </script>

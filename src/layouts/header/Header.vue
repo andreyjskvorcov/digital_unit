@@ -62,10 +62,10 @@ const onClickOpenMenu = (): void => {
 };
 
 const list = ref([
-  { label: 'Card', anchor: Anchors.MainBanner },
-  { label: 'App', anchor: Anchors.Partners },
-  { label: 'Customize', anchor: Anchors.Info },
-  { label: 'FAQs', anchor: Anchors.Analytics },
+  { label: 'Card', anchor: Anchors.CARD },
+  { label: 'App', anchor: Anchors.APP },
+  { label: 'Customize', anchor: Anchors.CUSTOMIZE },
+  { label: 'FAQs', anchor: Anchors.FAQS },
 ]);
 
 const onAnchorClick = () => {

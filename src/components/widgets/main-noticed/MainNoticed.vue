@@ -1,5 +1,5 @@
 <template>
-  <div class="main-noticed" ref="noticedRef">
+  <div class="main-noticed" ref="noticedRef" :id="Anchors.CUSTOMIZE">
     <div class="main-noticed__container">
       <div class="main-noticed__text">
         <h1>
@@ -22,6 +22,7 @@
 
 <script lang="ts" setup>
 import { useGsapScrollAnimations } from '@/composables/useGsapScrollAnimations';
+import { Anchors } from '@/constants';
 
 const noticedRef = useGsapScrollAnimations();
 </script>

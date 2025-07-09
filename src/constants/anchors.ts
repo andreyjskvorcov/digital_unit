@@ -1,6 +1,6 @@
 export enum Anchors {
-  MainBanner = 'main-banner',
-  Partners = 'partners',
-  Info = 'info',
-  Analytics = 'analytics',
+  CARD = 'card',
+  APP = 'app',
+  CUSTOMIZE = 'customize',
+  FAQS = 'faqs',
 }

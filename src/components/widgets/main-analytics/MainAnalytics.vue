@@ -1,5 +1,5 @@
 <template>
-  <div class="main-analytics" ref="analyticsRef" :id="Anchors.Analytics">
+  <div class="main-analytics" ref="analyticsRef">
     <div class="main-analytics__container">
       <div class="main-analytics__text">
         <h2>
@@ -40,7 +40,6 @@
 
 <script lang="ts" setup>
 import { useGsapScrollAnimations } from '@/composables/useGsapScrollAnimations';
-import { Anchors } from '@/constants';
 
 const analyticsRef = useGsapScrollAnimations();
 

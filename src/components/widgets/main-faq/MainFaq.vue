@@ -1,5 +1,5 @@
 <template>
-  <div class="main-faq" ref="faqRef">
+  <div class="main-faq" ref="faqRef" :id="Anchors.FAQS">
     <div class="main-faq__container">
       <div class="main-faq__text">
         <h2>FAQs</h2>
@@ -21,6 +21,7 @@
 <script lang="ts" setup>
 import { Accordion, Button } from '@/components/ui';
 import { useGsapScrollAnimations } from '@/composables/useGsapScrollAnimations';
+import { Anchors } from '@/constants';
 
 const items = [
   {

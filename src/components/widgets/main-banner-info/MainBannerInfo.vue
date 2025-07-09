@@ -1,5 +1,5 @@
 <template>
-  <div class="main-banner-info" ref="partnersRef" :id="Anchors.Info">
+  <div class="main-banner-info" ref="partnersRef" :id="Anchors.CARD">
     <div class="main-banner-info__container">
       <div class="main-banner-info__hero" ref="partnersHeroRef"></div>
 

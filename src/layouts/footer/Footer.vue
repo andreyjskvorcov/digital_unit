@@ -134,20 +134,11 @@ const socialList = [
     padding: $spacing-10;
     display: flex;
     flex-direction: column;
-
-    @media ($media-sm) {
-      padding: $spacing-4 $spacing-4 $spacing-5;
-    }
   }
 
   &__top {
     display: flex;
     justify-content: space-between;
-
-    @media ($media-sm) {
-      margin-top: $spacing-6;
-      justify-content: flex-start;
-    }
   }
 
   &__list {
@@ -156,10 +147,6 @@ const socialList = [
     list-style: none;
     gap: $gap-6;
     padding: 0;
-
-    @media ($media-sm) {
-      display: none;
-    }
   }
 
   &__item {
@@ -194,13 +181,6 @@ const socialList = [
     width: 100%;
     height: 182px;
     margin: 114px auto 0;
-
-    @media ($media-sm) {
-      order: -1;
-      margin: 0;
-      width: 262px;
-      height: 72px;
-    }
   }
 
   &__bottom {
@@ -212,12 +192,6 @@ const socialList = [
     @media ($media-md) {
       flex-direction: column;
     }
-
-    @media ($media-sm) {
-      margin-top: $spacing-14;
-      flex-direction: column-reverse;
-      gap: $gap-14;
-    }
   }
 
   &__subscribe {
@@ -228,28 +202,15 @@ const socialList = [
 
     .label {
       margin-bottom: $spacing-4;
-
-      @media ($media-sm) {
-        margin-bottom: $spacing-6;
-      }
     }
 
     .button {
       width: 142px;
       margin-left: $spacing-4;
-
-      @media ($media-sm) {
-        margin: $spacing-4 0 0;
-        order: 1;
-      }
     }
 
     .input {
       width: calc(100% - 158px);
-
-      @media ($media-sm) {
-        width: 100%;
-      }
     }
 
     p {
@@ -258,11 +219,6 @@ const socialList = [
       margin-top: $spacing-4;
       max-width: 431px;
       width: 100%;
-
-      @media ($media-sm) {
-        margin-top: $spacing-3;
-        font: $text-disclaimer-mobile;
-      }
     }
   }
 
@@ -271,10 +227,6 @@ const socialList = [
 
     .label {
       margin-bottom: $spacing-4;
-
-      @media ($media-sm) {
-        margin-bottom: $spacing-6;
-      }
     }
 
     &-list {
@@ -282,10 +234,6 @@ const socialList = [
       text-decoration: none;
       list-style: none;
       gap: $gap-4;
-
-      @media ($media-sm) {
-        gap: 14px;
-      }
     }
 
     &-item {
@@ -293,11 +241,6 @@ const socialList = [
       width: 60px;
       background-color: $color-white-10;
       border-radius: $radius-full;
-
-      @media ($media-sm) {
-        height: 52px;
-        width: 52px;
-      }
 
       a,
       a:visited {
@@ -311,11 +254,6 @@ const socialList = [
       .image {
         width: 28px;
         height: 28px;
-
-        @media ($media-sm) {
-          width: 24px;
-          height: 24px;
-        }
       }
     }
   }
@@ -325,30 +263,15 @@ const socialList = [
     gap: 14px;
     margin-left: auto;
 
-    @media ($media-md) {
-      margin: initial;
-      order: -1;
-    }
-
     a {
       &:first-child {
         width: 154px;
         height: 48px;
-
-        @media ($media-lg) {
-          width: 134px;
-          height: 43px;
-        }
       }
 
       &:last-child {
         width: 150px;
         height: 52px;
-
-        @media ($media-lg) {
-          width: 131px;
-          height: 44px;
-        }
       }
     }
   }
@@ -357,26 +280,10 @@ const socialList = [
     display: flex;
     align-items: flex-end;
 
-    @media ($media-lg) {
-      flex-wrap: wrap;
-    }
-
-    @media ($media-md) {
-      flex-wrap: nowrap;
-      flex-direction: column;
-      align-items: flex-start;
-      margin-top: $spacing-14;
-    }
-
     p {
       font: $text-link-s;
       color: $color-white;
       padding-bottom: $spacing-2;
-
-      @media ($media-md) {
-        padding: 0;
-        margin-top: $spacing-5;
-      }
     }
 
     ul {
@@ -388,28 +295,12 @@ const socialList = [
       margin-left: $spacing-6;
       padding-bottom: $spacing-2;
 
-      @media ($media-md) {
-        margin: $spacing-3 0 0;
-        padding: 0;
-        gap: $gap-4;
-      }
-
-      @media ($media-sm) {
-        flex-wrap: wrap;
-        gap: $gap-3 $gap-4;
-        margin: $spacing-1 0 0;
-      }
-
       li {
         a,
         a:visited {
           color: $color-white;
           cursor: pointer;
           font: $text-link-s;
-
-          @media ($media-md) {
-            color: $color-white-60;
-          }
 
           &:hover {
             opacity: 0.7;

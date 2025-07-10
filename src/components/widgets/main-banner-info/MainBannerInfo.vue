@@ -54,10 +54,6 @@ const partnersHeroRef = useGsapScrollAnimations({
     @media ($media-md) {
       padding: 110px 86px 0 0;
     }
-
-    @media ($media-sm) {
-      padding: 110px 0 0 0;
-    }
   }
 
   &__hero {
@@ -83,13 +79,6 @@ const partnersHeroRef = useGsapScrollAnimations({
     @media ($media-md) {
       bottom: 100px;
     }
-
-    @media ($media-sm) {
-      width: 444px;
-      height: 267px;
-      left: -88px;
-      bottom: 84px;
-    }
   }
 
   &__text {
@@ -99,17 +88,9 @@ const partnersHeroRef = useGsapScrollAnimations({
     flex-direction: column;
     gap: $gap-12;
 
-    @media ($media-sm) {
-      gap: $gap-8;
-    }
-
     h2 {
       color: $color-white;
       letter-spacing: -0.22rem;
-
-      @media ($media-sm) {
-        text-align: center;
-      }
 
       span {
         color: $color-light-gray;
@@ -120,12 +101,6 @@ const partnersHeroRef = useGsapScrollAnimations({
       color: $color-light-gray;
       max-width: 510px;
       width: 100%;
-
-      @media ($media-sm) {
-        text-align: center;
-        padding: 0 $spacing-4;
-        letter-spacing: -0.04rem;
-      }
     }
   }
 }

@@ -32,22 +32,11 @@ const partnersRef = useGsapScrollAnimations();
     width: 100%;
     align-items: center;
     gap: $gap-14;
-
-    @media ($media-sm) {
-      padding-top: $spacing-14;
-      gap: $gap-8;
-    }
   }
 
   &__caption {
     font: $text-caption;
     color: $color-light-gray;
-
-    @media ($media-sm) {
-      font: $text-caption-mobile;
-      text-align: center;
-      padding: 0 $spacing-15;
-    }
   }
 }
 </style>

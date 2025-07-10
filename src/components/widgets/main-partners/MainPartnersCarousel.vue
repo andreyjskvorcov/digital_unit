@@ -53,10 +53,6 @@ onClickOutside(emblaRef, (event) => resumeAutoScroll());
 <style lang="scss">
 .main-partners-carousel {
   height: 92px;
-
-  @media ($media-sm) {
-    height: 71px;
-  }
 }
 
 .embla-carousel {
@@ -85,11 +81,6 @@ onClickOutside(emblaRef, (event) => resumeAutoScroll());
   &__slide {
     flex: 0 0 330px;
     margin-right: 110px;
-
-    @media ($media-sm) {
-      flex: 0 0 251px;
-      margin-right: 40px;
-    }
   }
 }
 </style>

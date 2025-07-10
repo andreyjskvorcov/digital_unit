@@ -64,12 +64,6 @@ const faqRef = useGsapScrollAnimations();
     display: flex;
     justify-content: space-between;
     gap: $gap-2;
-
-    @media ($media-sm) {
-      padding: 120px $spacing-4;
-      flex-direction: column;
-      justify-content: flex-start;
-    }
   }
 
   &__text {
@@ -77,19 +71,11 @@ const faqRef = useGsapScrollAnimations();
 
     h2 {
       letter-spacing: -0.3rem;
-
-      @media ($media-sm) {
-        letter-spacing: -0.1rem;
-      }
     }
 
     p {
       margin-top: $spacing-12;
       color: $color-light-gray;
-
-      @media ($media-sm) {
-        margin-top: $spacing-8;
-      }
     }
 
     a,
@@ -102,10 +88,6 @@ const faqRef = useGsapScrollAnimations();
       );
       color: transparent;
       background-clip: text;
-
-      @media ($media-sm) {
-        font: $text-nav-link;
-      }
     }
   }
 
@@ -116,14 +98,6 @@ const faqRef = useGsapScrollAnimations();
     flex-direction: column;
     gap: $gap-14;
 
-    @media ($media-sm) {
-      gap: $gap-10;
-    }
-
-    @media ($media-sm) {
-      margin-top: $spacing-8;
-    }
-
     .accordion__body {
       p {
         max-width: 604px;
@@ -132,10 +106,6 @@ const faqRef = useGsapScrollAnimations();
 
     .button {
       max-width: 155px;
-
-      @media ($media-sm) {
-        max-width: 147px;
-      }
     }
   }
 }

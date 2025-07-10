@@ -23,10 +23,6 @@ const model = defineModel();
     font: $text-link-m;
     width: 100%;
 
-    @media ($media-sm) {
-      height: 52px;
-    }
-
     &::placeholder {
       color: $color-white-60;
       font: $text-link-m;

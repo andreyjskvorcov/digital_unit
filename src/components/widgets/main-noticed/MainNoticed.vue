@@ -40,7 +40,6 @@ const noticedRef = useGsapScrollAnimations();
 
   @media ($media-sm) {
     background-image: url(../../../assets/images/main-noticed/bg-mobile.png);
-    height: 821px;
   }
 
   &__cards {
@@ -57,10 +56,6 @@ const noticedRef = useGsapScrollAnimations();
 
     @media ($media-sm) {
       background-image: url(../../../assets/images/main-noticed/cards-mobile.png);
-      top: 446px;
-      width: 277px;
-      height: 375px;
-      left: 51%;
     }
   }
 
@@ -71,10 +66,6 @@ const noticedRef = useGsapScrollAnimations();
     height: 100%;
     position: relative;
     padding-top: 240px;
-
-    @media ($media-sm) {
-      padding-top: 120px;
-    }
   }
 
   &__text {
@@ -85,21 +76,11 @@ const noticedRef = useGsapScrollAnimations();
     width: 100%;
     text-align: center;
 
-    @media ($media-sm) {
-      gap: $gap-8;
-    }
-
     h1 {
       color: $color-white;
       letter-spacing: -0.34rem;
       display: flex;
       flex-direction: column;
-
-      @media ($media-sm) {
-        font: $text-heading-2-mobile;
-        display: block;
-        letter-spacing: -0.16rem;
-      }
 
       span {
         color: $color-light-gray;
@@ -110,11 +91,6 @@ const noticedRef = useGsapScrollAnimations();
       color: $color-light-gray;
       width: 100%;
       padding: 0 $spacing-10;
-
-      @media ($media-sm) {
-        letter-spacing: -0.014rem;
-        padding: 0 $spacing-6;
-      }
     }
   }
 }

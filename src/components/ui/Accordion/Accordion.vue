@@ -53,19 +53,11 @@ const isOpen = (index: number) => {
   width: 100%;
   gap: $gap-3;
 
-  @media ($media-sm) {
-    gap: $gap-2;
-  }
-
   &__item {
     background-color: $color-light-black;
     border-radius: $radius-rounded-3xl;
     padding: $spacing-10;
     transition: $transition-fast;
-
-    @media ($media-sm) {
-      padding: $spacing-5;
-    }
   }
 
   &__header {
@@ -76,9 +68,6 @@ const isOpen = (index: number) => {
     cursor: pointer;
 
     h3 {
-      @media ($media-sm) {
-        line-height: 28px;
-      }
     }
 
     &.is-active {
@@ -89,11 +78,6 @@ const isOpen = (index: number) => {
 
     .image {
       transition: $transition-fast;
-
-      @media ($media-sm) {
-        width: 24px;
-        height: 24px;
-      }
     }
   }
 
@@ -104,14 +88,6 @@ const isOpen = (index: number) => {
 
     p {
       color: $color-light-gray;
-
-      @media ($media-sm) {
-        font: $text-disclaimer;
-      }
-    }
-
-    @media ($media-sm) {
-      margin-top: $spacing-7;
     }
   }
 }

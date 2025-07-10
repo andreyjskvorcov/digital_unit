@@ -53,10 +53,6 @@ const isMd = useBreakpoint('md');
   color: $color-white;
   overflow: hidden;
 
-  @media ($media-sm) {
-    height: auto;
-  }
-
   &__container {
     position: relative;
     height: 100%;
@@ -64,10 +60,6 @@ const isMd = useBreakpoint('md');
     flex-direction: column;
     padding: 124px $spacing-10 $spacing-10;
     width: 100%;
-
-    @media ($media-sm) {
-      padding: 84px $spacing-4 530px;
-    }
   }
 
   &__title {
@@ -75,10 +67,6 @@ const isMd = useBreakpoint('md');
     letter-spacing: -0.33rem;
     position: relative;
     z-index: 3;
-
-    @media ($media-sm) {
-      letter-spacing: -0.22rem;
-    }
   }
 
   &__description {
@@ -86,10 +74,6 @@ const isMd = useBreakpoint('md');
     max-width: 558px;
     position: relative;
     z-index: 3;
-
-    @media ($media-sm) {
-      margin-top: $spacing-8;
-    }
   }
 
   &__action {
@@ -113,21 +97,8 @@ const isMd = useBreakpoint('md');
     background-position: bottom center;
     background-size: contain;
 
-    @media ($media-lg) {
-      right: 12px;
-    }
-
-    @media ($media-md) {
-      width: 363px;
-      height: 575px;
-    }
-
     @media ($media-sm) {
       background-image: url(../../../assets/images/main-banner/hand-mobile.png);
-      width: 334px;
-      right: initial;
-      left: 44%;
-      transform: translate(-50%);
     }
   }
 

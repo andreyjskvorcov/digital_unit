@@ -46,7 +46,7 @@ const noticedRef = useGsapScrollAnimations();
     background-image: url(../../../assets/images/main-noticed/cards.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     width: 619px;
     height: 835px;
     position: absolute;

@@ -13,13 +13,11 @@
   },
   "dependencies": {
     "@vueuse/core": "^13.5.0",
-    "embla-carousel-auto-scroll": "^8.6.0",
-    "embla-carousel-autoplay": "^8.6.0",
-    "embla-carousel-vue": "^8.6.0",
     "gsap": "^3.13.0",
     "pinia": "^3.0.3",
     "vue": "^3.5.17",
-    "vue-router": "^4.5.1"
+    "vue-router": "^4.5.1",
+    "vue3-marquee": "^4.2.2"
   },
   "devDependencies": {
     "@tsconfig/node22": "^22.0.2",

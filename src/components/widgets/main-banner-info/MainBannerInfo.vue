@@ -38,22 +38,12 @@ const partnersHeroRef = useGsapScrollAnimations({
   display: flex;
   height: 828px;
 
-  @media ($media-md) {
-    height: 798px;
-  }
-
   &__container {
     position: relative;
     height: 100%;
     display: flex;
-    flex-direction: column;
     padding: 240px 86px 0 0;
     width: 100%;
-    align-items: flex-end;
-
-    @media ($media-md) {
-      padding: 110px 86px 0 0;
-    }
   }
 
   &__hero {
@@ -63,22 +53,8 @@ const partnersHeroRef = useGsapScrollAnimations({
     background-size: cover;
     width: 746px;
     height: 467px;
-    position: absolute;
     left: 0;
     bottom: 180px;
-
-    @media ($media-xl) {
-      width: 546px;
-    }
-
-    @media ($media-lg) {
-      width: 346px;
-      height: 267px;
-    }
-
-    @media ($media-md) {
-      bottom: 100px;
-    }
   }
 
   &__text {

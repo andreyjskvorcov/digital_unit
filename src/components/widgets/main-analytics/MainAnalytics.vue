@@ -98,9 +98,7 @@ const badgeRef = useGsapScrollAnimations({
     background-size: cover;
     width: 397px;
     height: 575px;
-    position: absolute;
-    right: calc(14% - 4px);
-    bottom: 0;
+    position: relative;
   }
 
   &__badge {

@@ -5,6 +5,7 @@
       :key="index"
       class="accordion__item"
       @click="toggle(index)"
+      :class="{ 'is-active': activeIndex === index }"
     >
       <div
         class="accordion__header"
@@ -15,11 +16,12 @@
         <Icon image-name="dropdown-arrow.svg" />
       </div>
 
-      <Transition name="accordion">
-        <div @click.stop v-if="isOpen(index)" class="accordion__body">
-          <p>{{ item.content }}</p>
-        </div>
-      </Transition>
+      <div
+        class="accordion__body"
+        :class="{ 'is-active': activeIndex === index }"
+      >
+        <p>{{ item.content }}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -57,7 +59,13 @@ const isOpen = (index: number) => {
     background-color: $color-light-black;
     border-radius: $radius-rounded-3xl;
     padding: $spacing-10;
-    transition: $transition-fast;
+    transition: all ease-in-out 0.3s;
+    height: 111px;
+    overflow: hidden;
+
+    &.is-active {
+      height: 228px;
+    }
   }
 
   &__header {
@@ -66,9 +74,6 @@ const isOpen = (index: number) => {
     display: flex;
     justify-content: space-between;
     cursor: pointer;
-
-    h3 {
-    }
 
     &.is-active {
       .image {
@@ -84,21 +89,21 @@ const isOpen = (index: number) => {
   &__body {
     overflow: hidden;
     color: $color-white;
-    margin-top: 44px;
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    transition: all ease-in-out 0.3s;
+
+    &.is-active {
+      overflow: visible;
+      height: auto;
+      opacity: 1;
+      margin-top: 44px;
+    }
 
     p {
       color: $color-light-gray;
     }
   }
-}
-
-.accordion-enter-active,
-.accordion-leave-active {
-  transition: opacity 0.3s ease;
-}
-
-.accordion-enter,
-.accordion-leave-to {
-  opacity: 0;
 }
 </style>

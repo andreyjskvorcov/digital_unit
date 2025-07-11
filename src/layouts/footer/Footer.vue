@@ -188,10 +188,6 @@ const socialList = [
     margin-top: 112px;
     justify-content: space-between;
     gap: $gap-4;
-
-    @media ($media-md) {
-      flex-direction: column;
-    }
   }
 
   &__subscribe {

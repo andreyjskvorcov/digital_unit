@@ -38,40 +38,40 @@ $color-gradient: linear-gradient(
 );
 
 /* font styles */
-$text-heading-1: 500 96px/94% $font-family-base; // Heading 1 96/94%
-$text-heading-1-mobile: 500 60px/94% $font-family-base; // Heading 1 60/94% mobile
+$text-heading-1: 500 6rem/94% $font-family-base; // Heading 1 96/94%
+$text-heading-1-mobile: 500 3.75rem/94% $font-family-base; // Heading 1 60/94% mobile
 
-$text-heading-2: 500 72px/94% $font-family-base; // Heading 2 72/94%
-$text-heading-2-mobile: 500 48px/94% $font-family-base; // Heading 2 72/94% mobile
+$text-heading-2: 500 4.5rem/94% $font-family-base; // Heading 2 72/94%
+$text-heading-2-mobile: 500 3rem/94% $font-family-base; // Heading 2 72/94% mobile
 
-$text-heading-3: 500 24px/130% $font-family-base; // Heading 3 24/130%
+$text-heading-3: 500 1.5rem/130% $font-family-base; // Heading 3 24/130%
 $text-heading-3-mobile: 500 18px/135% $font-family-base; // Heading 3 18/135% mobile
 
-$text-paragraph: 500 18px/135% $font-family-base; // Paragraph 18/135%
-$text-paragraph-mobile: 500 18px/135% $font-family-base; // Paragraph 18/135% mobile
+$text-paragraph: 500 1.125rem/135% $font-family-base; // Paragraph 18/135%
+$text-paragraph-mobile: 500 1.125rem/135% $font-family-base; // Paragraph 18/135% mobile
 
-$text-body-m: 400 18px/135% $font-family-base; // Paragraph 18/135%
-$text-body-m-mobile: 400 18px/135% $font-family-base; // Paragraph 18/135% mobile
+$text-body-m: 400 1.125rem/135% $font-family-base; // Paragraph 18/135%
+$text-body-m-mobile: 400 1.125rem/135% $font-family-base; // Paragraph 18/135% mobile
 
-$text-body-s: 400 18px/150% $font-family-base; // Body S 14/150%
-$text-body-s-mobile: 400 18px/150% $font-family-base; // Body S 14/150% mobile
+$text-body-s: 400 1.125rem/150% $font-family-base; // Body S 14/150%
+$text-body-s-mobile: 400 1.125rem/150% $font-family-base; // Body S 14/150% mobile
 
-$text-link-m: 500 18px/135% $font-family-base; // Link M 18/135%
-$text-link-m-mobile: 500 18px/135% $font-family-base; // Link M 18/135% mobile
+$text-link-m: 500 1.125rem/135% $font-family-base; // Link M 18/135%
+$text-link-m-mobile: 500 1.125rem/135% $font-family-base; // Link M 18/135% mobile
 
-$text-link-s: 500 14px/135% $font-family-base; // Link S 14/135%
-$text-link-s-mobile: 500 14px/135% $font-family-base; // Link S 14/135% mobile
+$text-link-s: 500 0.875rem/135% $font-family-base; // Link S 14/135%
+$text-link-s-mobile: 500 0.875rem/135% $font-family-base; // Link S 14/135% mobile
 
-$text-nav-link: 500 18px/135% $font-family-base; // Nav Link 18/135%
+$text-nav-link: 500 1.125rem/135% $font-family-base; // Nav Link 18/135%
 $text-nav-link-mobile: 500 60px/94% $font-family-base; // Nav Link 60/94% mobile
 
-$text-caption: 500 16px/150% $font-family-base; // Caption 16/150%
-$text-caption-mobile: 500 16px/140% $font-family-base; // Caption 16/140% mobile
+$text-caption: 500 1rem/150% $font-family-base; // Caption 16/150%
+$text-caption-mobile: 500 1rem/140% $font-family-base; // Caption 16/140% mobile
 
-$text-disclaimer: 400 14px/150% $font-family-base; // Disclaimer 14/150%
-$text-disclaimer-mobile: 400 12px/150% $font-family-base; // Disclaimer 12/150% mobile
+$text-disclaimer: 400 0.875rem/150% $font-family-base; // Disclaimer 14/150%
+$text-disclaimer-mobile: 400 0.75rem/150% $font-family-base; // Disclaimer 12/150% mobile
 
-$text-badge: 500 10px/150% $font-family-base; // Caption 16/150%
+$text-badge: 500 0.625rem/150% $font-family-base; // Caption 16/150%
 
 /* transition */
 $transition-fast: 0.2s ease-in-out;

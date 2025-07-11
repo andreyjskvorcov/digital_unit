@@ -1,86 +1,36 @@
 <template>
   <div class="main-partners-carousel">
-    <div class="embla-carousel">
-      <div
-        class="embla"
-        ref="emblaRef"
-        @mouseleave="resumeAutoScroll"
-        @mouseenter="pauseAutoScroll"
-      >
-        <div class="embla__container">
-          <div class="embla__slide" v-for="el in 20" :key="el">
-            <Icon image-name="bono-logo.svg" />
-          </div>
-        </div>
+    <Vue3Marquee :pause-on-hover="true" :pause-on-click="true">
+      <div class="item" v-for="el in 5" :key="el">
+        <Icon image-name="bono-logo.svg" />
       </div>
-    </div>
+    </Vue3Marquee>
   </div>
 </template>
 
 <script lang="ts" setup>
+import { ref } from 'vue';
 import { Icon } from '@/components/ui';
-import emblaCarouselVue from 'embla-carousel-vue';
-import AutoScroll from 'embla-carousel-auto-scroll';
 import { onClickOutside } from '@vueuse/core';
+import { Vue3Marquee } from 'vue3-marquee';
 
-const [emblaRef, emblaApi] = emblaCarouselVue(
-  {
-    align: 'start',
-    containScroll: 'keepSnaps',
-    dragFree: true,
-    loop: true,
-  },
-  [AutoScroll({ startDelay: 100 })],
-);
+const componentRef = ref();
 
 const pauseAutoScroll = () => {
-  if (!emblaApi.value) return;
-
-  const autoScroll = emblaApi.value.plugins().autoScroll;
-  autoScroll.stop();
+  console.log('pause');
 };
 
 const resumeAutoScroll = () => {
-  if (!emblaApi.value) return;
-
-  const autoScroll = emblaApi.value.plugins().autoScroll;
-  autoScroll.play();
+  console.log('resume');
 };
 
-onClickOutside(emblaRef, (event) => resumeAutoScroll());
+onClickOutside(componentRef, (event) => resumeAutoScroll());
 </script>
 
 <style lang="scss">
 .main-partners-carousel {
-  height: 92px;
-}
-
-.embla-carousel {
-  position: relative;
-}
-
-.embla {
-  overflow: hidden;
-
-  &.is-draggable {
-    cursor: grab;
-  }
-
-  &.is-dragging {
-    cursor: grabbing;
-  }
-
-  &__container {
-    display: flex;
-    display: flex;
-    user-select: none;
-    -webkit-touch-callout: none;
-    -webkit-tap-highlight-color: transparent;
-  }
-
-  &__slide {
-    flex: 0 0 330px;
-    margin-right: 110px;
-  }
+  max-width: 100%;
+  margin: auto;
+  padding: 20px;
 }
 </style>

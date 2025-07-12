@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps } from 'vue'
+import { defineProps } from 'vue';
 
 defineProps({
   type: {
@@ -13,7 +13,7 @@ defineProps({
     validator: (val: string) =>
       ['primary-black', 'primary-white', 'secondary', 'tertiary'].includes(val),
   },
-})
+});
 </script>
 
 <style scoped lang="scss">
@@ -21,19 +21,19 @@ defineProps({
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 8rem;
   border: none;
   font-family: inherit;
   cursor: pointer;
   transition: $transition-fast;
   padding: $spacing-1 $spacing-7;
-  border-radius: 80px;
-  height: 60px;
+  border-radius: 80rem;
+  height: 60rem;
   font: $text-link-m;
 
   @media ($media-sm) {
     padding: $spacing-1 $spacing-6;
-    height: 52px;
+    height: 52rem;
   }
 
   &:active,
@@ -66,7 +66,7 @@ defineProps({
 
   &.secondary {
     background-color: $color-white-10;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(20rem);
     color: $color-white;
 
     &:hover,
@@ -78,10 +78,10 @@ defineProps({
   }
 
   &.tertiary {
-    height: 36px;
-    padding: $spacing-1 14px;
+    height: 36rem;
+    padding: $spacing-1 14rem;
     background-color: $color-white-10;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(20rem);
     color: $color-white;
 
     &:hover,
@@ -92,7 +92,7 @@ defineProps({
     }
 
     @media ($media-sm) {
-      height: 32px;
+      height: 32rem;
       font: $text-link-s;
       padding: $spacing-1 $spacing-3;
     }

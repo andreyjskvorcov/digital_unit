@@ -40,14 +40,14 @@ import { Anchors } from '@/constants';
 
 const bannerRef = useGsapScrollAnimations();
 
-const isMd = useBreakpoint('md');
+const isMd = useBreakpoint('sm');
 </script>
 
 <style lang="scss">
 .main-banner {
   width: 100vw;
   height: 100vh;
-  min-height: 800px; // для поддержки мобильных браузеров
+  min-height: 800rem; // для поддержки мобильных браузеров
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,12 +55,21 @@ const isMd = useBreakpoint('md');
   color: $color-white;
   overflow: hidden;
 
+  @media ($media-sm) {
+    min-height: 969rem;
+  }
+
   &__container {
     position: relative;
     height: 100%;
     display: flex;
-    padding: 124px $spacing-10 $spacing-10;
+    padding: 124rem 40rem 40rem 40rem;
     width: 100%;
+    justify-content: space-between;
+
+    @media ($media-sm) {
+      padding: 84px 16px 530px;
+    }
   }
 
   &__text {
@@ -69,37 +78,49 @@ const isMd = useBreakpoint('md');
   }
 
   &__title {
-    max-width: 558px;
-    letter-spacing: -0.33rem;
+    max-width: 558rem;
+    letter-spacing: -5.5%;
     position: relative;
     z-index: 3;
   }
 
   &__description {
-    margin-top: auto;
-    max-width: 558px;
+    margin-top: 179rem;
+    max-width: 558rem;
     position: relative;
     z-index: 3;
+
+    @media ($media-sm) {
+      margin-top: 32rem;
+    }
   }
 
   &__action {
     display: flex;
     gap: $gap-3;
-    margin-top: $spacing-8;
+    margin-top: 32rem;
     position: relative;
     z-index: 3;
   }
 
   &__hand {
-    position: relative;
     z-index: 2;
     height: 100%;
-    min-width: 35rem;
-    height: 48rem;
+    width: 564rem;
+    height: 774rem;
     background-image: url(../../../assets/images/main-banner/hand.png);
     background-repeat: no-repeat;
-    background-position: bottom center;
+    background-position: bottom;
+    position: absolute;
     background-size: contain;
+    right: 220rem;
+    bottom: 0;
+
+    @media ($media-sm) {
+      height: 546rem;
+      width: 397px;
+      right: 44rem;
+    }
   }
 
   &__glass {
@@ -112,6 +133,10 @@ const isMd = useBreakpoint('md');
     top: 0;
     width: 100%;
     height: 100%;
+
+    @media ($media-sm) {
+      background-image: url(../../../assets/images/main-banner/glass-mobile.png);
+    }
   }
 }
 </style>

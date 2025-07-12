@@ -159,7 +159,7 @@ onUnmounted(() => {
       flex-direction: column;
       justify-content: flex-end;
       padding: 0 $spacing-4 110px;
-      transform: translate(0, calc(-120% + $header-height-sm));
+      transform: translate(0, calc(-200% + $header-height-sm));
       transition: $transition-slow;
       margin: 0;
     }

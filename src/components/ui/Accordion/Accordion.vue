@@ -55,16 +55,29 @@ const isOpen = (index: number) => {
   width: 100%;
   gap: $gap-3;
 
+  @media ($media_sm) {
+    gap: 8rem;
+  }
+
   &__item {
     background-color: $color-light-black;
     border-radius: $radius-rounded-3xl;
     padding: $spacing-10;
     transition: all ease-in-out 0.3s;
-    height: 111px;
+    height: 111rem;
     overflow: hidden;
 
+    @media ($media_sm) {
+      height: 68rem;
+      padding: $spacing-5;
+    }
+
     &.is-active {
-      height: 228px;
+      height: 228rem;
+
+      @media ($media_sm) {
+        height: 201rem;
+      }
     }
   }
 
@@ -83,6 +96,11 @@ const isOpen = (index: number) => {
 
     .image {
       transition: $transition-fast;
+
+      @media ($media_sm) {
+        width: 24rem;
+        height: 24rem;
+      }
     }
   }
 
@@ -94,15 +112,27 @@ const isOpen = (index: number) => {
     opacity: 0;
     transition: all ease-in-out 0.3s;
 
+    @media ($media_sm) {
+      padding-right: 16rem;
+    }
+
     &.is-active {
       overflow: visible;
       height: auto;
       opacity: 1;
-      margin-top: 44px;
+      margin-top: 44rem;
+
+      @media ($media_sm) {
+        margin-top: 22rem;
+      }
     }
 
     p {
       color: $color-light-gray;
+
+      @media ($media_sm) {
+        font: $text-disclaimer;
+      }
     }
   }
 }

@@ -55,8 +55,13 @@ const badgeRef = useGsapScrollAnimations({
 .main-analytics {
   padding: 0 $spacing-10;
   background-color: $color-black;
-  height: 640px;
-  overflow: hidden;
+  height: 640rem;
+  margin-top: -4rem;
+
+  @media ($media-sm) {
+    padding: 0 $spacing-4;
+    height: 722rem;
+  }
 
   &__container {
     border-radius: $radius-rounded-3xl;
@@ -65,18 +70,32 @@ const badgeRef = useGsapScrollAnimations({
     padding: $spacing-16;
     height: 100%;
     position: relative;
+
+    @media ($media-sm) {
+      padding: $spacing-8 $spacing-5;
+    }
   }
 
   &__text {
     display: flex;
     flex-direction: column;
     gap: $gap-12;
-    max-width: 538px;
+    max-width: 538rem;
     width: 100%;
+
+    @media ($media-sm) {
+      gap: $gap-8;
+    }
 
     h2 {
       color: $color-white;
-      letter-spacing: -0.24rem;
+      letter-spacing: -5.5%;
+
+      @media ($media-sm) {
+        br {
+          display: none;
+        }
+      }
 
       span {
         color: $color-light-gray;
@@ -85,8 +104,13 @@ const badgeRef = useGsapScrollAnimations({
 
     p {
       color: $color-light-gray;
-      max-width: 510px;
+      max-width: 510rem;
       width: 100%;
+
+      @media ($media-sm) {
+        letter-spacing: -1.1%;
+        max-width: 100%;
+      }
     }
   }
 
@@ -96,9 +120,19 @@ const badgeRef = useGsapScrollAnimations({
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    width: 397px;
-    height: 575px;
-    position: relative;
+    width: 397rem;
+    height: 575rem;
+    position: absolute;
+    right: 186rem;
+    bottom: 0;
+
+    @media ($media-sm) {
+      right: 50%;
+      transform: translate(50%);
+      width: 204rem;
+      height: 290rem;
+      background-position: top;
+    }
   }
 
   &__badge {
@@ -110,31 +144,51 @@ const badgeRef = useGsapScrollAnimations({
 
     &-item {
       position: absolute;
-      height: 101px;
+      height: 101rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
       overflow: hidden;
       z-index: 2;
 
+      @media ($media-sm) {
+        height: 59rem;
+      }
+
       &:first-child {
         padding: $spacing-4;
-        max-width: 183px;
+        max-width: 183rem;
         width: 100%;
         border-radius: $radius-rounded-3xl $radius-rounded-3xl 0
           $radius-rounded-3xl;
-        left: -156px;
-        top: 122px;
+        left: -156rem;
+        top: 122rem;
+
+        @media ($media-sm) {
+          max-width: 110rem;
+          top: $spacing-4;
+          left: -52rem;
+          padding: $spacing-2;
+          border-radius: $radius-xl $radius-xl 0 $radius-xl;
+        }
       }
 
       &:last-child {
         padding: $spacing-5;
         border-radius: $radius-rounded-3xl $radius-rounded-3xl
           $radius-rounded-3xl 0;
-        max-width: 173px;
+        max-width: 173rem;
         width: 100%;
-        bottom: 96px;
-        right: -128px;
+        bottom: 96rem;
+        right: -128rem;
+
+        @media ($media-sm) {
+          max-width: 99rem;
+          padding: $spacing-2;
+          right: -54rem;
+          bottom: 46rem;
+          border-radius: $radius-xl $radius-xl $radius-xl 0;
+        }
       }
 
       &::before {
@@ -146,6 +200,11 @@ const badgeRef = useGsapScrollAnimations({
         backdrop-filter: blur(24px);
         left: 0;
         top: 0;
+
+        @media ($media-sm) {
+          background-color: $color-black-50;
+          backdrop-filter: blur(13px);
+        }
       }
 
       span {
@@ -153,12 +212,20 @@ const badgeRef = useGsapScrollAnimations({
         z-index: 1;
         font: $text-caption;
         color: $color-white-60;
+
+        @media ($media-sm) {
+          font: $text-badge;
+        }
       }
 
       p {
         color: $color-white;
         position: relative;
         z-index: 1;
+
+        @media ($media-sm) {
+          font: $text-badge;
+        }
       }
     }
   }

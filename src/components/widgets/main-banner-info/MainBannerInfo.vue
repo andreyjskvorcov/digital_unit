@@ -34,16 +34,30 @@ const partnersHeroRef = useGsapScrollAnimations({
 <style lang="scss">
 .main-banner-info {
   background-color: $color-black;
-  height: auto;
   display: flex;
-  height: 828px;
+  height: 828rem;
+  width: 100%;
+  overflow: hidden;
+
+  @media ($media-md) {
+    height: 798rem;
+  }
 
   &__container {
     position: relative;
     height: 100%;
     display: flex;
-    padding: 240px 86px 0 0;
+    align-items: flex-start;
+    padding: 182rem 86rem 0 0;
     width: 100%;
+    gap: 12rem;
+
+    @media ($media-sm) {
+      padding: 106rem 0 0 0;
+      flex-direction: column-reverse;
+      justify-content: flex-end;
+      gap: 0;
+    }
   }
 
   &__hero {
@@ -51,22 +65,40 @@ const partnersHeroRef = useGsapScrollAnimations({
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    width: 746px;
-    height: 467px;
-    left: 0;
-    bottom: 180px;
+    width: 746rem;
+    height: 467rem;
+    position: relative;
+
+    @media ($media-sm) {
+      width: 414rem;
+      height: 414rem;
+      position: absolute;
+      bottom: 16rem;
+      left: -72rem;
+    }
   }
 
   &__text {
-    max-width: 538px;
+    max-width: 538rem;
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: $gap-12;
+    margin-left: auto;
+    padding-top: 58rem;
+
+    @media ($media-sm) {
+      gap: $gap-8;
+      padding: 0;
+    }
 
     h2 {
       color: $color-white;
-      letter-spacing: -0.22rem;
+      letter-spacing: -5.5%;
+
+      @media ($media-sm) {
+        text-align: center;
+      }
 
       span {
         color: $color-light-gray;
@@ -77,6 +109,14 @@ const partnersHeroRef = useGsapScrollAnimations({
       color: $color-light-gray;
       max-width: 510px;
       width: 100%;
+
+      @media ($media-sm) {
+        text-align: center;
+        max-width: 100%;
+        padding: 0 $spacing-4;
+        letter-spacing: -0.04rem;
+        margin: 0 auto;
+      }
     }
   }
 }

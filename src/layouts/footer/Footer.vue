@@ -134,11 +134,20 @@ const socialList = [
     padding: $spacing-10;
     display: flex;
     flex-direction: column;
+
+    @media ($media-sm) {
+      padding: $spacing-4 $spacing-4 $spacing-5;
+    }
   }
 
   &__top {
     display: flex;
     justify-content: space-between;
+
+    @media ($media-sm) {
+      margin-top: $spacing-6;
+      justify-content: flex-start;
+    }
   }
 
   &__list {
@@ -147,6 +156,10 @@ const socialList = [
     list-style: none;
     gap: $gap-6;
     padding: 0;
+
+    @media ($media-sm) {
+      display: none;
+    }
   }
 
   &__item {
@@ -177,52 +190,87 @@ const socialList = [
   &__logo {
     background: url(../../assets/images/icons/logo_mob.svg) no-repeat center /
       contain;
-    max-width: 668px;
+    max-width: 668rem;
     width: 100%;
-    height: 182px;
-    margin: 114px auto 0;
+    height: 182rem;
+    margin: 114rem auto 0;
+
+    @media ($media-sm) {
+      order: -1;
+      margin: 0;
+      width: 262rem;
+      height: 72rem;
+    }
   }
 
   &__bottom {
     display: flex;
-    margin-top: 112px;
+    margin-top: 112rem;
     justify-content: space-between;
     gap: $gap-4;
+
+    @media ($media-sm) {
+      margin-top: $spacing-14;
+      flex-direction: column-reverse;
+      gap: $gap-14;
+    }
   }
 
   &__subscribe {
-    max-width: 589px;
+    max-width: 589rem;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
 
     .label {
       margin-bottom: $spacing-4;
+
+      @media ($media-sm) {
+        margin-bottom: $spacing-6;
+      }
     }
 
     .button {
-      width: 142px;
+      width: 142rem;
       margin-left: $spacing-4;
+
+      @media ($media-sm) {
+        margin: $spacing-4 0 0;
+        order: 1;
+      }
     }
 
     .input {
-      width: calc(100% - 158px);
+      width: calc(100% - 158rem);
+
+      @media ($media-sm) {
+        width: 100%;
+      }
     }
 
     p {
       font: $text-disclaimer;
       color: $color-white;
       margin-top: $spacing-4;
-      max-width: 431px;
+      max-width: 431rem;
       width: 100%;
+
+      @media ($media-sm) {
+        margin-top: $spacing-3;
+        font: $text-disclaimer-mobile;
+      }
     }
   }
 
   &__socials {
-    max-width: 360px;
+    max-width: 360rem;
 
     .label {
       margin-bottom: $spacing-4;
+
+      @media ($media-sm) {
+        margin-bottom: $spacing-6;
+      }
     }
 
     &-list {
@@ -230,13 +278,22 @@ const socialList = [
       text-decoration: none;
       list-style: none;
       gap: $gap-4;
+
+      @media ($media-sm) {
+        gap: 14rem;
+      }
     }
 
     &-item {
-      height: 60px;
-      width: 60px;
+      height: 60rem;
+      width: 60rem;
       background-color: $color-white-10;
       border-radius: $radius-full;
+
+      @media ($media-sm) {
+        height: 52rem;
+        width: 52rem;
+      }
 
       a,
       a:visited {
@@ -248,26 +305,46 @@ const socialList = [
       }
 
       .image {
-        width: 28px;
-        height: 28px;
+        width: 28rem;
+        height: 28rem;
+
+        @media ($media-sm) {
+          width: 24rem;
+          height: 24rem;
+        }
       }
     }
   }
 
   &__apps {
     display: flex;
-    gap: 14px;
+    gap: 14rem;
     margin-left: auto;
+
+    @media ($media-sm) {
+      margin: 0;
+      order: -1;
+    }
 
     a {
       &:first-child {
-        width: 154px;
-        height: 48px;
+        width: 154rem;
+        height: 48rem;
+
+        @media ($media-sm) {
+          width: 134rem;
+          height: 43rem;
+        }
       }
 
       &:last-child {
-        width: 150px;
-        height: 52px;
+        width: 150rem;
+        height: 52rem;
+
+        @media ($media-sm) {
+          width: 131rem;
+          height: 44re;
+        }
       }
     }
   }
@@ -276,10 +353,20 @@ const socialList = [
     display: flex;
     align-items: flex-end;
 
+    @media ($media-sm) {
+      flex-direction: column;
+      margin-top: 56rem;
+      align-items: flex-start;
+    }
+
     p {
       font: $text-link-s;
       color: $color-white;
       padding-bottom: $spacing-2;
+
+      @media ($media-sm) {
+        margin-top: $spacing-3;
+      }
     }
 
     ul {
@@ -290,6 +377,12 @@ const socialList = [
       padding: 0;
       margin-left: $spacing-6;
       padding-bottom: $spacing-2;
+
+      @media ($media-sm) {
+        flex-wrap: wrap;
+        gap: $gap-3 $gap-4;
+        margin: $spacing-1 0 0;
+      }
 
       li {
         a,

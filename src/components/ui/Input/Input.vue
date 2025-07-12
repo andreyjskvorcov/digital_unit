@@ -15,13 +15,17 @@ const model = defineModel();
     background: none;
     outline: none;
     border: 1px solid $color-white-30;
-    height: 60px;
-    border-radius: 80px;
+    height: 60rem;
+    border-radius: 80rem;
     outline: none;
-    padding: 17px 28px 18px;
+    padding: 17rem 28rem 18rem;
     color: $color-white;
     font: $text-link-m;
     width: 100%;
+
+    @media ($media-sm) {
+      height: 51rem;
+    }
 
     &::placeholder {
       color: $color-white-60;

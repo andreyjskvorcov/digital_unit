@@ -1,11 +1,13 @@
 <template>
-  <div class="main-partners-carousel">
-    <Vue3Marquee :pause-on-hover="true" :pause-on-click="true">
-      <div class="item" v-for="el in 5" :key="el">
-        <Icon image-name="bono-logo.svg" />
-      </div>
-    </Vue3Marquee>
-  </div>
+  <Vue3Marquee
+    :pause-on-hover="true"
+    :pause-on-click="true"
+    class="main-partners-carousel"
+  >
+    <div class="main-partners-carousel__item" v-for="el in 5" :key="el">
+      <Icon image-name="bono-logo.svg" />
+    </div>
+  </Vue3Marquee>
 </template>
 
 <script lang="ts" setup>
@@ -31,6 +33,26 @@ onClickOutside(componentRef, (event) => resumeAutoScroll());
 .main-partners-carousel {
   max-width: 100%;
   margin: auto;
-  padding: 20px;
+  gap: 110rem;
+
+  @media ($media-sm) {
+    gap: 40rem;
+  }
+
+  .marquee {
+    gap: 110rem;
+
+    @media ($media-sm) {
+      gap: 40rem;
+    }
+  }
+
+  &__item {
+    width: 330rem;
+
+    @media ($media-sm) {
+      width: 251rem;
+    }
+  }
 }
 </style>

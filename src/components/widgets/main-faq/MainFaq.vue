@@ -60,22 +60,35 @@ const faqRef = useGsapScrollAnimations();
   width: 100%;
 
   &__container {
-    padding: 240px $spacing-10;
+    padding: 244rem $spacing-10;
     display: flex;
     justify-content: space-between;
     gap: $gap-2;
+
+    @media ($media-sm) {
+      padding: 120rem $spacing-4;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
   }
 
   &__text {
     color: $color-white;
 
     h2 {
-      letter-spacing: -0.3rem;
+      letter-spacing: -5.5%;
+
+      @media ($media-sm) {
+      }
     }
 
     p {
       margin-top: $spacing-12;
       color: $color-light-gray;
+
+      @media ($media-sm) {
+        margin-top: $spacing-8;
+      }
     }
 
     a,
@@ -88,24 +101,40 @@ const faqRef = useGsapScrollAnimations();
       );
       color: transparent;
       background-clip: text;
+
+      @media ($media-sm) {
+        font: $text-nav-link;
+      }
     }
   }
 
   &__questions {
-    max-width: 929px;
+    max-width: 929rem;
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: $gap-14;
 
+    @media ($media-sm) {
+      gap: $gap-10;
+    }
+
+    @media ($media-sm) {
+      margin-top: $spacing-8;
+    }
+
     .accordion__body {
       p {
-        max-width: 604px;
+        max-width: 604rem;
       }
     }
 
     .button {
-      max-width: 155px;
+      max-width: 155rem;
+
+      @media ($media-sm) {
+        max-width: 147rem;
+      }
     }
   }
 }

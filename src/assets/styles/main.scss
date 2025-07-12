@@ -3,6 +3,11 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 0.0694445vw;
+
+  @media ($media-sm) {
+    font-size: 0.266667vw;
+  }
 }
 
 body {
@@ -14,6 +19,7 @@ body {
   width: 100vw;
   font: $text-body-m;
   background-color: $color-black;
+  font-size: 0.0694445vw;
 
   &.is-hidden {
     overflow: hidden;
@@ -21,6 +27,7 @@ body {
 
   @media ($media-sm) {
     font: $text-body-m-mobile;
+    font-size: 0.266667vw;
   }
 }
 

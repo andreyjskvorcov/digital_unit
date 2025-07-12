@@ -5,6 +5,7 @@
       :key="index"
       class="accordion__item"
       @click="toggle(index)"
+      :class="{ 'is-active': activeIndex === index }"
     >
       <div
         class="accordion__header"
@@ -15,11 +16,12 @@
         <Icon image-name="dropdown-arrow.svg" />
       </div>
 
-      <Transition name="accordion">
-        <div @click.stop v-if="isOpen(index)" class="accordion__body">
-          <p>{{ item.content }}</p>
-        </div>
-      </Transition>
+      <div
+        class="accordion__body"
+        :class="{ 'is-active': activeIndex === index }"
+      >
+        <p>{{ item.content }}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -53,11 +55,30 @@ const isOpen = (index: number) => {
   width: 100%;
   gap: $gap-3;
 
+  @media ($media_sm) {
+    gap: 8rem;
+  }
+
   &__item {
     background-color: $color-light-black;
     border-radius: $radius-rounded-3xl;
     padding: $spacing-10;
-    transition: $transition-fast;
+    transition: all ease-in-out 0.3s;
+    height: 111rem;
+    overflow: hidden;
+
+    @media ($media_sm) {
+      height: 68rem;
+      padding: $spacing-5;
+    }
+
+    &.is-active {
+      height: 228rem;
+
+      @media ($media_sm) {
+        height: 201rem;
+      }
+    }
   }
 
   &__header {
@@ -67,9 +88,6 @@ const isOpen = (index: number) => {
     justify-content: space-between;
     cursor: pointer;
 
-    h3 {
-    }
-
     &.is-active {
       .image {
         transform: scale(1, -1);
@@ -78,27 +96,44 @@ const isOpen = (index: number) => {
 
     .image {
       transition: $transition-fast;
+
+      @media ($media_sm) {
+        width: 24rem;
+        height: 24rem;
+      }
     }
   }
 
   &__body {
     overflow: hidden;
     color: $color-white;
-    margin-top: 44px;
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    transition: all ease-in-out 0.3s;
+
+    @media ($media_sm) {
+      padding-right: 16rem;
+    }
+
+    &.is-active {
+      overflow: visible;
+      height: auto;
+      opacity: 1;
+      margin-top: 44rem;
+
+      @media ($media_sm) {
+        margin-top: 22rem;
+      }
+    }
 
     p {
       color: $color-light-gray;
+
+      @media ($media_sm) {
+        font: $text-disclaimer;
+      }
     }
   }
-}
-
-.accordion-enter-active,
-.accordion-leave-active {
-  transition: opacity 0.3s ease;
-}
-
-.accordion-enter,
-.accordion-leave-to {
-  opacity: 0;
 }
 </style>

@@ -28,15 +28,25 @@ const partnersRef = useGsapScrollAnimations();
   &__container {
     display: flex;
     flex-direction: column;
-    padding-top: $spacing-22;
+    padding-top: 88rem;
     width: 100%;
     align-items: center;
-    gap: $gap-14;
+    gap: 55rem;
+
+    @media ($media-sm) {
+      padding-top: 56rem;
+      gap: 32rem;
+    }
   }
 
   &__caption {
     font: $text-caption;
     color: $color-light-gray;
+
+    @media ($media-sm) {
+      padding: 0 60rem;
+      text-align: center;
+    }
   }
 }
 </style>

@@ -38,40 +38,40 @@ $color-gradient: linear-gradient(
 );
 
 /* font styles */
-$text-heading-1: 500 96px/94% $font-family-base; // Heading 1 96/94%
-$text-heading-1-mobile: 500 60px/94% $font-family-base; // Heading 1 60/94% mobile
+$text-heading-1: 500 96rem/94% $font-family-base; // Heading 1 96/94%
+$text-heading-1-mobile: 500 60rem/94% $font-family-base; // Heading 1 60/94% mobile
 
-$text-heading-2: 500 72px/94% $font-family-base; // Heading 2 72/94%
-$text-heading-2-mobile: 500 48px/94% $font-family-base; // Heading 2 72/94% mobile
+$text-heading-2: 500 72rem/94% $font-family-base; // Heading 2 72/94%
+$text-heading-2-mobile: 500 48rem/94% $font-family-base; // Heading 2 72/94% mobile
 
-$text-heading-3: 500 24px/130% $font-family-base; // Heading 3 24/130%
-$text-heading-3-mobile: 500 18px/135% $font-family-base; // Heading 3 18/135% mobile
+$text-heading-3: 500 24rem/130% $font-family-base; // Heading 3 24/130%
+$text-heading-3-mobile: 500 18rem/135% $font-family-base; // Heading 3 18/135% mobile
 
-$text-paragraph: 500 18px/135% $font-family-base; // Paragraph 18/135%
-$text-paragraph-mobile: 500 18px/135% $font-family-base; // Paragraph 18/135% mobile
+$text-paragraph: 500 18rem/135% $font-family-base; // Paragraph 18/135%
+$text-paragraph-mobile: 500 18rem/135% $font-family-base; // Paragraph 18/135% mobile
 
-$text-body-m: 400 18px/135% $font-family-base; // Paragraph 18/135%
-$text-body-m-mobile: 400 18px/135% $font-family-base; // Paragraph 18/135% mobile
+$text-body-m: 400 18rem/135% $font-family-base; // Paragraph 18/135%
+$text-body-m-mobile: 400 18rem/135% $font-family-base; // Paragraph 18/135% mobile
 
-$text-body-s: 400 18px/150% $font-family-base; // Body S 14/150%
-$text-body-s-mobile: 400 18px/150% $font-family-base; // Body S 14/150% mobile
+$text-body-s: 400 18rem/150% $font-family-base; // Body S 14/150%
+$text-body-s-mobile: 400 18rem/150% $font-family-base; // Body S 14/150% mobile
 
-$text-link-m: 500 18px/135% $font-family-base; // Link M 18/135%
-$text-link-m-mobile: 500 18px/135% $font-family-base; // Link M 18/135% mobile
+$text-link-m: 500 18rem/135% $font-family-base; // Link M 18/135%
+$text-link-m-mobile: 500 18rem/135% $font-family-base; // Link M 18/135% mobile
 
-$text-link-s: 500 14px/135% $font-family-base; // Link S 14/135%
-$text-link-s-mobile: 500 14px/135% $font-family-base; // Link S 14/135% mobile
+$text-link-s: 500 14rem/135% $font-family-base; // Link S 14/135%
+$text-link-s-mobile: 500 14rem/135% $font-family-base; // Link S 14/135% mobile
 
-$text-nav-link: 500 18px/135% $font-family-base; // Nav Link 18/135%
-$text-nav-link-mobile: 500 60px/94% $font-family-base; // Nav Link 60/94% mobile
+$text-nav-link: 500 18rem/135% $font-family-base; // Nav Link 18/135%
+$text-nav-link-mobile: 500 60rem/94% $font-family-base; // Nav Link 60/94% mobile
 
-$text-caption: 500 16px/150% $font-family-base; // Caption 16/150%
-$text-caption-mobile: 500 16px/140% $font-family-base; // Caption 16/140% mobile
+$text-caption: 500 16rem/150% $font-family-base; // Caption 16/150%
+$text-caption-mobile: 500 16rem/140% $font-family-base; // Caption 16/140% mobile
 
-$text-disclaimer: 400 14px/150% $font-family-base; // Disclaimer 14/150%
-$text-disclaimer-mobile: 400 12px/150% $font-family-base; // Disclaimer 12/150% mobile
+$text-disclaimer: 400 14rem/150% $font-family-base; // Disclaimer 14/150%
+$text-disclaimer-mobile: 400 12rem/150% $font-family-base; // Disclaimer 12/150% mobile
 
-$text-badge: 500 10px/150% $font-family-base; // Caption 16/150%
+$text-badge: 500 10rem/150% $font-family-base; // Caption 16/150%
 
 /* transition */
 $transition-fast: 0.2s ease-in-out;
@@ -79,46 +79,46 @@ $transition-base: 0.3s ease;
 $transition-slow: 0.5s ease-in-out;
 
 /* border-radius */
-$radius-default: 4px;
-$radius-xs: 2px;
-$radius-sm: 4px;
-$radius-md: 6px;
-$radius-lg: 8px;
-$radius-xl: 12px;
-$radius-rounded-2xl: 16px;
-$radius-rounded-3xl: 24px;
-$radius-rounded-4xl: 32px;
+$radius-default: 4rem;
+$radius-xs: 2rem;
+$radius-sm: 4rem;
+$radius-md: 6rem;
+$radius-lg: 8rem;
+$radius-xl: 12rem;
+$radius-rounded-2xl: 16rem;
+$radius-rounded-3xl: 24rem;
+$radius-rounded-4xl: 32rem;
 $radius-rounded-none: 0;
-$radius-full: 9999px;
+$radius-full: 9999rem;
 
 /* spacing from margin | padding | top | left | right | bottom */
 $spacing-auto: auto;
 $spacing-0: 0;
-$spacing-1: 4px;
-$spacing-2: 8px;
-$spacing-3: 12px;
-$spacing-4: 16px;
-$spacing-5: 20px;
-$spacing-6: 24px;
-$spacing-7: 28px;
-$spacing-8: 32px;
-$spacing-9: 36px;
-$spacing-10: 40px;
-$spacing-11: 44px;
-$spacing-12: 48px;
-$spacing-14: 56px;
-$spacing-15: 60px;
-$spacing-16: 64px;
-$spacing-20: 80px;
-$spacing-21: 84px;
-$spacing-22: 88px;
-$spacing-24: 96px;
-$spacing-32: 128px;
-$spacing-33: 134px;
-$spacing-40: 160px;
-$spacing-48: 192px;
-$spacing-56: 224px;
-$spacing-64: 256px;
+$spacing-1: 4rem;
+$spacing-2: 8rem;
+$spacing-3: 12rem;
+$spacing-4: 16rem;
+$spacing-5: 20rem;
+$spacing-6: 24rem;
+$spacing-7: 28rem;
+$spacing-8: 32rem;
+$spacing-9: 36rem;
+$spacing-10: 40rem;
+$spacing-11: 44rem;
+$spacing-12: 48rem;
+$spacing-14: 56rem;
+$spacing-15: 60rem;
+$spacing-16: 64rem;
+$spacing-20: 80rem;
+$spacing-21: 84rem;
+$spacing-22: 88rem;
+$spacing-24: 96rem;
+$spacing-32: 128rem;
+$spacing-33: 134rem;
+$spacing-40: 160rem;
+$spacing-48: 192rem;
+$spacing-56: 224rem;
+$spacing-64: 256rem;
 
 /* grid-template-columns :example grid-template-columns: $grid-cols-1 */
 $grid-cols-1: repeat(1, minmax(0, 1fr));
@@ -149,28 +149,28 @@ $col-span-11: span 11 / span 11;
 $col-span-12: span 12 / span 12;
 
 /* gap */
-$gap-1: 4px;
-$gap-2: 8px;
-$gap-3: 12px;
-$gap-4: 16px;
-$gap-5: 20px;
-$gap-6: 24px;
-$gap-7: 24px;
-$gap-8: 32px;
-$gap-9: 36px;
-$gap-10: 40px;
-$gap-12: 48px;
-$gap-13: 50px;
-$gap-14: 54px;
-$gap-15: 60px;
-$gap-16: 64px;
-$gap-20: 80px;
-$gap-24: 96px;
-$gap-32: 128px;
-$gap-40: 160px;
-$gap-48: 192px;
-$gap-56: 224px;
-$gap-64: 256px;
+$gap-1: 4rem;
+$gap-2: 8rem;
+$gap-3: 12rem;
+$gap-4: 16rem;
+$gap-5: 20rem;
+$gap-6: 24rem;
+$gap-7: 24rem;
+$gap-8: 32rem;
+$gap-9: 36rem;
+$gap-10: 40rem;
+$gap-12: 48rem;
+$gap-13: 50rem;
+$gap-14: 54rem;
+$gap-15: 60rem;
+$gap-16: 64rem;
+$gap-20: 80rem;
+$gap-24: 96rem;
+$gap-32: 128rem;
+$gap-40: 160rem;
+$gap-48: 192rem;
+$gap-56: 224rem;
+$gap-64: 256rem;
 
 /* width */
 $w-auto: auto;

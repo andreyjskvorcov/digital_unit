@@ -2,7 +2,7 @@ import { useMediaQuery } from '@vueuse/core';
 
 export const breakpointConfig = {
   xs: 375,
-  sm: 767,
+  sm: 768,
   md: 1023,
   lg: 1279,
   xl: 1439,

@@ -30,7 +30,7 @@ const noticedRef = useGsapScrollAnimations();
 <style lang="scss">
 .main-noticed {
   background-color: $color-black;
-  height: 1545px;
+  height: 1545rem;
   overflow: hidden;
   background-image: url(../../../assets/images/main-noticed/bg.png);
   background-repeat: no-repeat;
@@ -40,6 +40,7 @@ const noticedRef = useGsapScrollAnimations();
 
   @media ($media-sm) {
     background-image: url(../../../assets/images/main-noticed/bg-mobile.png);
+    height: 821rem;
   }
 
   &__cards {
@@ -47,15 +48,17 @@ const noticedRef = useGsapScrollAnimations();
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    width: 619px;
-    height: 835px;
+    width: 620rem;
+    height: 836rem;
     position: absolute;
-    top: 710px;
+    top: 710rem;
     left: 53%;
     transform: translate(-50%);
 
     @media ($media-sm) {
-      background-image: url(../../../assets/images/main-noticed/cards-mobile.png);
+      top: 446rem;
+      width: 277rem;
+      height: 375rem;
     }
   }
 
@@ -65,22 +68,35 @@ const noticedRef = useGsapScrollAnimations();
     width: 100%;
     height: 100%;
     position: relative;
-    padding-top: 240px;
+    padding-top: 240rem;
+
+    @media ($media-sm) {
+      padding-top: 120rem;
+    }
   }
 
   &__text {
     display: flex;
     flex-direction: column;
     gap: $gap-12;
-    max-width: 710px;
+    max-width: 710rem;
     width: 100%;
     text-align: center;
 
+    @media ($media-sm) {
+      gap: $gap-8;
+    }
+
     h1 {
       color: $color-white;
-      letter-spacing: -0.34rem;
+      letter-spacing: -5.5%;
       display: flex;
       flex-direction: column;
+
+      @media ($media-sm) {
+        font: $text-heading-2-mobile;
+        display: block;
+      }
 
       span {
         color: $color-light-gray;
@@ -91,6 +107,11 @@ const noticedRef = useGsapScrollAnimations();
       color: $color-light-gray;
       width: 100%;
       padding: 0 $spacing-10;
+
+      @media ($media-sm) {
+        letter-spacing: -2.1%;
+        padding: 0 $spacing-6;
+      }
     }
   }
 }

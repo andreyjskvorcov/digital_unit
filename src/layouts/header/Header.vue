@@ -107,16 +107,28 @@ onUnmounted(() => {
     background-color: $color-black;
   }
 
+  @media ($media-sm) {
+    height: $header-height-sm;
+  }
+
   &__container {
     width: 100%;
     padding: 0 $spacing-10;
     height: 100%;
     display: flex;
     align-items: center;
+
+    @media ($media-sm) {
+      padding: 0 $spacing-4;
+    }
   }
 
   &__action {
     margin-left: $spacing-12;
+
+    @media ($media-sm) {
+      margin-left: initial;
+    }
   }
 
   &__logo {
@@ -128,11 +140,29 @@ onUnmounted(() => {
     @media ($media-sm) {
       background: url(../../assets/images/icons/logo_mob.svg) no-repeat center /
         contain;
+      width: 80px;
+      height: 22px;
     }
   }
 
   &__nav {
     margin-left: auto;
+
+    @media ($media-sm) {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: calc(100% - $header-height-sm);
+      background-color: $color-black;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 0 $spacing-4 110px;
+      transform: translate(0, calc(-200% + $header-height-sm));
+      transition: $transition-slow;
+      margin: 0;
+    }
 
     &.is-open {
       transform: translate(0);
@@ -163,6 +193,11 @@ onUnmounted(() => {
     list-style: none;
     gap: $gap-8;
     padding: 0;
+
+    @media ($media-sm) {
+      gap: $gap-6;
+      flex-direction: column;
+    }
   }
 
   &__burger {
@@ -174,6 +209,7 @@ onUnmounted(() => {
     justify-content: center;
     position: relative;
     transform: translate(10px);
+    z-index: 3;
 
     span {
       height: 2px;
@@ -209,11 +245,24 @@ onUnmounted(() => {
   &__item {
     transition: $transition-fast;
 
+    &.is-acitve {
+      a,
+      a:visited {
+        @media ($media-sm) {
+          color: $color-light-gray;
+        }
+      }
+    }
+
     a,
     a:visited {
       color: $color-white;
       cursor: pointer;
       font: $text-nav-link;
+
+      @media ($media-sm) {
+        font: $text-nav-link-mobile;
+      }
 
       &:hover {
         opacity: 0.7;
